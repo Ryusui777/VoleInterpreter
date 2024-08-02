@@ -1,13 +1,14 @@
 package guiBuildingTools;
+import main.UI.Interfaces.generalTools;
+
 import java.awt.*;
 
-public class myWindow extends javax.swing.JFrame implements generalTools{
+public class myWindow extends javax.swing.JFrame implements generalTools {
 
     Color windowBackground;
     public myWindow() {
         this.windowBackground = Color.BLACK;
         this.setSize(800, 600);
-        this.setLayout(null);
         this.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
     }

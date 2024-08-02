@@ -1,5 +1,5 @@
-package app;
-import guiBuildingTools.generalTools;
+package main.UI.Interfaces;
+
 import java.awt.*;
 import java.util.HashMap;
 public interface colorThemes {
@@ -20,6 +20,7 @@ public interface colorThemes {
       }
 
       static HashMap<String, Color> getBarca(){
+
           HashMap<String, Color> barca = new HashMap<>();
           barca.put("BG", new Color(0x12086F));
           barca.put("FontColor", new Color(0xFFFFFF));
@@ -29,15 +30,17 @@ public interface colorThemes {
           barca.put("Register1", new Color(0xEDBB00));
           barca.put("Register2", new Color(0xA50044));
           barca.put("MenuBar", new Color(0xDB0030));
-
           barca.put("codeSpace", new Color(0x12085F));
           barca.put("Alternative", new Color(0x0000000));
+
           return barca;
+
       }
 
       static HashMap<String, Color> getDefault(){
+
          HashMap<String, Color> defaults = new HashMap<>();
-         defaults.put("BG", new Color(0x030056));
+         defaults.put("BG", new Color(0x030057));
          defaults.put("FontColor", new Color(0x00F8EE));
          defaults.put("Thumb", new Color(0,249,255, 180));
          defaults.put("BorderColor", new Color(0x0900FF));
@@ -45,8 +48,7 @@ public interface colorThemes {
          defaults.put("Register1", new Color(0x12));
          defaults.put("Register2", new Color(0xA50044));
          defaults.put("MenuBar", new Color(0x0900FF));
-         defaults.put("codeSpace", new Color(3, 0, 83));
-         defaults.put("Alternative", new Color(0x0000000));
+         defaults.put("codeSpace", new Color(3, 20, 86));
          return defaults;
 
       }

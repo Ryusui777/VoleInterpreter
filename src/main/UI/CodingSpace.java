@@ -1,23 +1,26 @@
-package app;
-import guiBuildingTools.generalTools;
+package main.UI;
+import main.UI.Interfaces.colorThemes;
+import main.UI.Interfaces.generalTools;
+import com.google.gson.Gson;
 import javax.swing.*;
 import javax.swing.border.Border;
+import java.awt.*;
 
-public class AppCodeSpace extends javax.swing.JScrollPane implements colorThemes {
+public class CodingSpace extends javax.swing.JScrollPane implements colorThemes {
 
     JTextArea textArea;
-
     {
         textArea = new JTextArea();
+        textArea.setBackground(colorPalette.get("Default").get("codeSpace"));
         textArea.setFont(colorThemes.deafultCodeSpaceFont);
         textArea.setForeground(colorThemes.colorPalette.get("Default").get("FontColor"));
         textArea.setCaretColor(colorThemes.colorPalette.get("Default").get("FontColor"));
     }
 
-    AppCodeSpace() {
+    public CodingSpace() {
 
         // Creates Border
-        Border border = BorderFactory.createLineBorder(colorPalette.get("Default").get("BorderColor"), generalTools.getRatio(0.0015));
+        Border border = BorderFactory.createLineBorder(colorPalette.get("Default").get("BorderColor"), generalTools.getRatio(0.002));
 
         // Sets textArea as view port
         setViewportView(textArea);
@@ -34,19 +37,24 @@ public class AppCodeSpace extends javax.swing.JScrollPane implements colorThemes
 
         // Sets background color
         getViewport().getView().setBackground(colorThemes.colorPalette.get("Default").get("codeSpace"));
+        getViewport().setOpaque(true);
 
         // Sets border
         setBorder(border);
+        setVisible(true);
 
     }
 
-    static AppScrollBar getScrollBar(int orientation){
-        return new AppScrollBar(colorThemes.colorPalette.get("Default").get("Thumb"),
+    static main.UI.Entities.ScrollBar getScrollBar(int orientation){
+        return new main.UI.Entities.ScrollBar(colorThemes.colorPalette.get("Default").get("Thumb"),
                 colorThemes.colorPalette.get("Default").get("codeSpace"),colorThemes.colorPalette.get("Barca").get("FocusedThumb"), orientation);
     }
 
     public void changeTheme(String themeName){
+
         textArea.setForeground(colorThemes.colorPalette.get(themeName).get("FontColor"));
         getViewport().getView().setBackground(colorThemes.colorPalette.get(themeName).get("codeSpace"));
+        setBorder(BorderFactory.createLineBorder(colorPalette.get(themeName).get("BorderColor"), generalTools.getRatio(0.0015)));
+
     }
 }

@@ -1,4 +1,6 @@
 package guiBuildingTools;
+import main.UI.Interfaces.generalTools;
+
 import java.awt.*;
 
 public class myTextArea extends javax.swing.JTextArea implements generalTools {

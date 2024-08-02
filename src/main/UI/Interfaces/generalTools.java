@@ -1,4 +1,4 @@
-package guiBuildingTools;
+package main.UI.Interfaces;
 
 import java.awt.*;
 

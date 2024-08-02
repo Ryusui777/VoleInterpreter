@@ -1,4 +1,6 @@
 package guiBuildingTools;
+import main.UI.Interfaces.generalTools;
+
 import javax.swing.JPanel;
 import java.awt.*;
 

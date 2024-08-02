@@ -1,12 +1,11 @@
-package app;
+package main.UI.Entities;
 import javax.swing.*;
 import javax.swing.plaf.basic.BasicScrollBarUI;
 import java.awt.*;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseAdapter;
-public class AppScrollBar extends javax.swing.JScrollBar{
 
-    public AppScrollBar(Color thumbColor, Color trackColor, Color focusedThumb, int orientation) {
+public class ScrollBar extends javax.swing.JScrollBar{
+
+    public ScrollBar(Color thumbColor, Color trackColor, Color focusedThumb, int orientation) {
         super(orientation);
         setUI(new CustomScrollBarUI(thumbColor, trackColor, focusedThumb));
         this.setFocusable(true);
