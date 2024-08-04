@@ -148,5 +148,10 @@ public class Compiler {
             }
             return cleanTokens;
         }
+
+        private static void classifier(ArrayList<String> cleanTokens) {
+            String[] Keywords = {"print", "morphInt", "morphFloat"};
+
+        }
     }
 }
